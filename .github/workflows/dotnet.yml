@@ -23,7 +23,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build -c Release --no-restore -p:Version=1.0.0-${{ github.run_id }} -p:CommitHash=${{ github.sha }}  -r linux-arm
+      run: dotnet build -c Release --no-restore -p:Version=1.0.0-${{ github.run_id }} -p:CommitHash=${{ github.sha }}
     - name: Build
       run: dotnet publish -c Release --no-build  -r linux-arm
     - name: Log in to the Container registry
